@@ -13,8 +13,8 @@ bigQueryTable="xxx"
 cat 'Takeout/Location History/LocationHistory.json' | jq -c '.locations[]' > locationHistory.json
 
 # Upload your file to Google Cloud Storage and then upload to Google BigQuery
-gsutil -mq cp -r "locationHistory.json" "$cloudStorageBucket/"
+gsutil -mq cp -r "locationHistory.json" "gs://$cloudStorageBucket/"
 bq load --source_format=NEWLINE_DELIMITED_JSON --autodetect $bigQueryDataset.$bigQueryTable "gs://$cloudStorageBucket/locationHistory.json"
 
 rm -rf Takeout
-mv locationHistory.json data/
+mv "locationHistory.json" data/
