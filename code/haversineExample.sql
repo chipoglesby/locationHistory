@@ -1,7 +1,8 @@
 SELECT
   latitude,
   longitude,
-  date (69.0 *
+  date,
+  (69.0 *
     DEGREES(ACOS(COS(RADIANS(latitudeLag)) *
     COS(RADIANS(latitude)) *
     COS(RADIANS(longitudeLag) -
