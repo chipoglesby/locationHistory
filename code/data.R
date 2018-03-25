@@ -7,7 +7,7 @@ dataset <- 'xxx'
 table <- 'xxx'
 project <- 'xxx'
 
-accuracyQuery <-
+dataqery <-
 "
 SELECT
   latitude,
