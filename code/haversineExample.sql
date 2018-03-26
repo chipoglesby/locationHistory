@@ -12,8 +12,7 @@ SELECT
 FROM (
   SELECT
     date,
-    latitudeE7,
-    latitude,
+    latitudeE7 latitude,
     longitudeE7 longitude,
     LAG(latitude) OVER (ORDER BY date ASC) latitudeLag,
     LAG(longitude) OVER (ORDER BY date ASC) longitudeLag
@@ -22,5 +21,3 @@ FROM (
     [xxx.xxx])
 ORDER BY
   date ASC
-LIMIT
-  10
