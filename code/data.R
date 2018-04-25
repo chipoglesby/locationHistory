@@ -1,4 +1,4 @@
-ibrary(bigrquery)
+library(bigrquery)
 library(tidyverse)
 library(magrittr)
 library(ggmap)
@@ -57,7 +57,7 @@ GROUP BY
 ORDER BY
   date ASC"
 
-  data <- query_exec(dataQuery, 
+  data <- query_exec(dataQuery,
                      project,
                      max_pages = Inf)
 
@@ -88,17 +88,17 @@ ORDER BY
     count(activityConfidence, sort = TRUE)
 
   # Accuracy Level
-  dataLevel <- data %>% 
+  dataLevel <- data %>%
     count(accuracyLevel, sort = TRUE)
 
   # Activity Confidence by Type
   typeConfidence <- data %>%
     group_by(activityType, activityConfidence) %>%
-    summarize(n = n()) %>% 
+    summarize(n = n()) %>%
     arrange(activityType, desc(activityConfidence))
 
   # Let's try to geocode some addresses.
   geocodedCity <- cities %>%
-    top_n(10, n) %>% 
+    top_n(10, n) %>%
     mutate(address = geocode(cityLatLong,
                              output = 'latlona')$address)

@@ -21,3 +21,5 @@ FROM (
     [xxx.xxx])
 ORDER BY
   date ASC
+LIMIT
+  10
