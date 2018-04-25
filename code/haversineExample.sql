@@ -12,8 +12,12 @@ SELECT
 FROM (
   SELECT
     date,
+<<<<<<< HEAD
     latitudeE7,
     latitude,
+=======
+    latitudeE7 latitude,
+>>>>>>> master
     longitudeE7 longitude,
     LAG(latitude) OVER (ORDER BY date ASC) latitudeLag,
     LAG(longitude) OVER (ORDER BY date ASC) longitudeLag
@@ -22,5 +26,8 @@ FROM (
     [xxx.xxx])
 ORDER BY
   date ASC
+<<<<<<< HEAD
 LIMIT
   10
+=======
+>>>>>>> master
