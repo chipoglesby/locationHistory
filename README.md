@@ -3,9 +3,9 @@
 You can follow along with my blog posts here about how to analyze your Google
 location history.
 
-[Part One](http://www.chipoglesby.com/2018/03/2018-analyzing-google-location-historyI/)
-[Part Two](http://www.chipoglesby.com/2018/03/2018-analyzing-google-location-historyII/)
-[Part Three](http://www.chipoglesby.com/2018/03/analyzing-google-location-historyIII/)
+1. [Part One](http://www.chipoglesby.com/2018/03/2018-analyzing-google-location-historyI/)
+2. [Part Two](http://www.chipoglesby.com/2018/03/2018-analyzing-google-location-historyII/)
+3. [Part Three](http://www.chipoglesby.com/2018/03/analyzing-google-location-historyIII/)
 
 In order to follow along with this project you'll need two things:
 
